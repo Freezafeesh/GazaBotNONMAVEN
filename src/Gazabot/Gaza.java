@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Gazabot;
-
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -23,9 +22,9 @@ public class Gaza {
     public static void main(String[] args){
         
         try {
-         jda = new JDABuilder(AccountType.BOT).setToken("NjQ0NTE2NzIxMzc3NTQyMTY1.Xc1NQA.oNY8KFK7LLDIvsfRRN0uGKXEbdg").build(); 
+         jda = new JDABuilder(AccountType.BOT).setToken("NjQ0NTE2NzIxMzc3NTQyMTY1.XeN0MQ.uF8BObbAd3QTusZz7w1a7PVgMAc").build(); 
         } catch (Exception e) {
-            System.out.println("couldnt setup");
+            System.out.println(e);
         }
         jda.getPresence().setStatus(OnlineStatus.ONLINE);
          jda.getPresence().setActivity(Activity.playing("@Twitch.tv/Gaza02 \n type ;;help for more commands"));

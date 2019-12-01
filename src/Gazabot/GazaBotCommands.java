@@ -24,6 +24,7 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.requests.restaction.MessageAction;
+import net.dv8tion.jda.internal.requests.Route.Users;
 /**
  *
  * @author troy
@@ -302,12 +303,14 @@ public class GazaBotCommands extends ListenerAdapter{
                             if(args.length < 2){
                             event.getChannel().sendMessage("Include the num of messages you want to delete").queue();
                         }
+                            
                         else{
                             if(User.equalsIgnoreCase("FreezaFeesh") || User.equalsIgnoreCase("JR") || User.equalsIgnoreCase("TechnicalToast") || User.equalsIgnoreCase("Nitron_Biohazard")){
                             try{List<Message> messages = event.getChannel().getHistory().retrievePast(Integer.parseInt(args[1])).complete();
                             event.getChannel().deleteMessages(messages).queue();
                             Thread.sleep(1000);
                             event.getChannel().sendMessage("`deleted "+args[1]+" messages successfully`").queue();
+                           
                             }catch(Exception e){
                                if(e.toString().startsWith("java.lang.IllegalArgumentException: Message")){
                                 event.getChannel().sendMessage("`Can't delete > 100 messages at once`").queue();
@@ -358,8 +361,7 @@ public class GazaBotCommands extends ListenerAdapter{
 
                     }
                         
-                    }
-    
+}
 
                      
                                 
