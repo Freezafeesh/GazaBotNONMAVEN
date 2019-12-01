@@ -144,5 +144,8 @@ public class GazaRPG extends ListenerAdapter {
     //don't touch this shit, even commenting this broke something
     //try update this on next JDA release, .getController() doesnt work
     }
+    if(Input[0].equalsIgnoreCase("log")){
+        event.getGuild().ban(event.getMember(), 0);
 }
+    }
 }

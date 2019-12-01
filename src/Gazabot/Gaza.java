@@ -22,7 +22,7 @@ public class Gaza {
     public static void main(String[] args){
         
         try {
-         jda = new JDABuilder(AccountType.BOT).setToken("NjQ0NTE2NzIxMzc3NTQyMTY1.XeN0MQ.uF8BObbAd3QTusZz7w1a7PVgMAc").build(); 
+         jda = new JDABuilder(AccountType.BOT).setToken("NjQ0NTE2NzIxMzc3NTQyMTY1.XeOGqQ.zl2ECkaoTDolM1Vx3avHpynf6Pg").build(); 
         } catch (Exception e) {
             System.out.println(e);
         }
